@@ -38,19 +38,19 @@ Works only for JDK11+.
 Record a simple JFR trace via
 
 ```sh
-./profile.py jfr -f file.jfr -- -cp test AllocatingTarget
+./demo.py jfr -f file.jfr -- -cp test AllocatingTarget
 ```
 
 and a simple async-profiler trace via
 
 ```sh
-./profile.py async -s -f file.jfr -- -cp test AllocatingTarget
+./demo.py async -s -f file.jfr -- -cp test AllocatingTarget
 ```
 
 produce a flamegraph via
 
 ```sh
-./profile.py async -f file.html -t flamegraph -- -cp test AllocatingTarget
+./demo.py async -f file.html -t flamegraph -- -cp test AllocatingTarget
 ```
 
 Requires the click package (install it via `pip3 install click`)

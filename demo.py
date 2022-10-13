@@ -11,15 +11,15 @@ Wrapper around JFR and async-profiler ($ASYNC_PROFILER should point to repo with
 
 Record a simple JFR trace via
 
-./profile.py jfr -f file.jfr -- -cp test AllocatingTarget
+./demo.py jfr -f file.jfr -- -cp test AllocatingTarget
 
 and a simple async-profiler trace via
 
-./profile.py async -s -f file.jfr -- -cp test AllocatingTarget
+./demo.py async -s -f file.jfr -- -cp test AllocatingTarget
 
 produce a flamegraph via
 
-./profile.py async -f file.html -t flamegraph -- -cp test AllocatingTarget
+./demo.py async -f file.html -t flamegraph -- -cp test AllocatingTarget
 
 Requires the click package
 """
