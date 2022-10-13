@@ -23,6 +23,8 @@ Specifically on Twitter
 - [Jean-Philippe Bempel](https://twitter.com/jpbempel)
 - [Peter Veentjer](https://twitter.com/PeterVeentjer)
 - [Gunnar Morling](https://twitter.com/gunnarmorling)
+- [Mario Fusco](https://twitter.com/mariofusco)
+- [Francesco Nigro](https://twitter.com/forked_franz)
 - [Chris Newland](https://twitter.com/chriswhocodes)
   - with his homepage full of helper tools to explore JEPs, VM options, ...: [chriswhocodes.com](https://www.chriswhocodes.com/)
 
