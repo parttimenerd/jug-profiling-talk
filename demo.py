@@ -55,8 +55,9 @@ def jfr(interval: Optional[str], settings: Path, file: Path, java_args: List[str
 @click.option("-t", "--type", default=None, type=click.Choice([None, "jfr", "collapsed", "flamegraph", "tree"]))
 @click.option("-s", "--jfrsync", default=False, show_default=True, is_flag=True,
               help=" start Java Flight Recording with the given configuration synchronously with the profiler")
+@click.option("-a", "--alloc", default=False, show_default=True, is_flag=True)
 @click.argument("java_args", nargs=-1)
-def ap(interval: str, file: Path, event: str, type: str, jfrsync: bool, java_args: List[str]):
+def ap(interval: str, file: Path, event: str, type: str, jfrsync: bool, alloc: bool, java_args: List[str]):
     args = f"-agentpath:{os.getenv('ASYNC_PROFILER')}/build/libasyncProfiler.so=start,interval={interval}," \
            f"event={event},file={file}"
     if type is not None:
@@ -68,6 +69,8 @@ def ap(interval: str, file: Path, event: str, type: str, jfrsync: bool, java_arg
         args += "," + type
     if jfrsync:
         args += ",jfrsync"
+    if alloc:
+        args += ",alloc"
     execute_java([args] + list(java_args))
 
 

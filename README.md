@@ -16,7 +16,7 @@ The following are interesting blogs on Java profiling and performance:
 - Markus Hirt: http://hirt.se/blog/
 
 ## Interesting people to follow on Twitter
-Specifically on Twitter
+
 - [Andrei Pangin](https://twitter.com/AndreiPangin): Creator of async-profiler
 - [JVMPerformance](https://twitter.com/JVMPerformance): JVM performance news (old)
 - [Alexsey Shipilev](https://twitter.com/shipilev)
@@ -28,8 +28,14 @@ Specifically on Twitter
 - [Chris Newland](https://twitter.com/chriswhocodes)
   - with his homepage full of helper tools to explore JEPs, VM options, ...: [chriswhocodes.com](https://www.chriswhocodes.com/)
 
+## Interesting blog posts and slides
 
-## profile.py
+- https://blog.ippon.fr/2013/03/11/improving-the-performance-of-the-spring-petclinic-sample-application-part-1-of-5/
+- https://bell-sw.com/announcements/2020/07/22/Hunting-down-code-hotspots-with-JDK-Flight-Recorder/
+- https://foojay.io/today/using-java-flight-recorder-and-mission-control-part-1/
+- https://raw.githubusercontent.com/mirage22/jmc-jvm-lang-tutorial/master/20211109_IngJUG_JFR_KotlinSpezial.pdf
+
+## demo.py
 
 Wrapper around JFR and [async-profiler](https://github.com/jvm-profiling-tools/async-profiler) 
 (`$ASYNC_PROFILER` should point to repo with built async-profiler).
@@ -38,19 +44,19 @@ Works only for JDK11+.
 Record a simple JFR trace via
 
 ```sh
-./demo.py jfr -f file.jfr -- -cp test AllocatingTarget
+./demo.py jfr -f file.jfr -- -cp example/target/example-1.0.jar EventFilterApp example/samples/large.jfr ".*GC.*"
 ```
 
 and a simple async-profiler trace via
 
 ```sh
-./demo.py async -s -f file.jfr -- -cp test AllocatingTarget
+./demo.py async -s -f file.jfr -- -cp example/target/example-1.0.jar EventFilterApp example/samples/large.jfr ".*GC.*"
 ```
 
 produce a flamegraph via
 
 ```sh
-./demo.py async -f file.html -t flamegraph -- -cp test AllocatingTarget
+./demo.py async -f file.html -t flamegraph -- -cp example/target/example-1.0.jar EventFilterApp example/samples/large.jfr ".*GC.*"
 ```
 
 Requires the click package (install it via `pip3 install click`)
@@ -59,6 +65,17 @@ Requires the click package (install it via `pip3 install click`)
 
 - `cpu_profiling.jfc`: CPU profiling and nothing more
 - `cpu_and_mem_profiling.jfc`: CPU and memory profiling and nothing more
+
+## Where to find the tools
+
+JMC can be found from different vendors, for example
+
+- [Azul](https://www.azul.com/products/components/azul-mission-control
+- [Oracle](https://www.oracle.com/java/technologies/javase/products-jmc8-downloads.html)
+
+The prototypical version of the IntellIJ plugin can be found on [GitHub](https://github.com/parttimenerd/intellij-profiler-plugin).
+
+[async-profiler](https://github.com/jvm-profiling-tools/async-profiler) can be found on GitHub too.
 
 ## License
 Apache 2.0
