@@ -26,7 +26,7 @@ public class EventStore {
         return event.getEventType().getName().equals(type.getName());
     }
 
-    public List<RecordedEvent> countEvents(EventType type) {
+    public List<RecordedEvent> getEvents(EventType type) {
         return readAllEvents(file).stream()
                 .filter(e -> matchesType(e, type))
                 .toList();
