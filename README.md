@@ -1,5 +1,6 @@
 # JUG Karlsruhe Talk
-Notes and scripts for my JUG Karlsruhe talk on Java profiling
+Notes and scripts for my JUG Karlsruhe talk on Java profiling [[pdf]](https://media.githubusercontent.com/media/parttimenerd/jug-profiling-talk/main/JUG%20Profiling%20October%202022.pdf)
+[[pptx]](https://media.githubusercontent.com/media/parttimenerd/jug-profiling-talk/main/JUG%20Profiling%20October%202022.pptx) [[recording]](https://youtu.be/Fglxqjcq4h0)
 
 ## Interesting talks
 I collected a list of interesting talks on profiling in a 
@@ -70,7 +71,7 @@ Requires the click package (install it via `pip3 install click`)
 
 JMC can be found from different vendors, for example
 
-- [Azul](https://www.azul.com/products/components/azul-mission-control
+- [Azul](https://www.azul.com/products/components/azul-mission-control)
 - [Oracle](https://www.oracle.com/java/technologies/javase/products-jmc8-downloads.html)
 
 The prototypical version of the IntellIJ plugin can be found on [GitHub](https://github.com/parttimenerd/intellij-profiler-plugin).
@@ -78,4 +79,4 @@ The prototypical version of the IntellIJ plugin can be found on [GitHub](https:/
 [async-profiler](https://github.com/jvm-profiling-tools/async-profiler) can be found on GitHub too.
 
 ## License
-Apache 2.0
+CC-BY-SA 3.0
