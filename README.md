@@ -15,6 +15,7 @@ The following are interesting blogs on Java profiling and performance:
 - Martin Thompson:  https://mechanical-sympathy.blogspot.com/
 - Jean-Philippe Bempel: https://jpbempel.github.io/
 - Markus Hirt: http://hirt.se/blog/
+- Krzysztof Ślusarski: https://krzysztofslusarski.github.io/
 
 ## Interesting people to follow on Twitter
 
