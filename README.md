@@ -14,7 +14,7 @@ The following are interesting blogs on Java profiling and performance:
 - Peter Lawrey:  http://blog.vanillajava.blog/
 - Martin Thompson:  https://mechanical-sympathy.blogspot.com/
 - Jean-Philippe Bempel: https://jpbempel.github.io/
-- Markus Hirt: http://hirt.se/blog/
+- Marcus Hirt: http://hirt.se/blog/
 - Krzysztof Ślusarski: https://krzysztofslusarski.github.io/
 
 ## Interesting people to follow on Twitter
@@ -36,6 +36,7 @@ The following are interesting blogs on Java profiling and performance:
 - https://bell-sw.com/announcements/2020/07/22/Hunting-down-code-hotspots-with-JDK-Flight-Recorder/
 - https://foojay.io/today/using-java-flight-recorder-and-mission-control-part-1/
 - https://raw.githubusercontent.com/mirage22/jmc-jvm-lang-tutorial/master/20211109_IngJUG_JFR_KotlinSpezial.pdf
+- https://foojay.io/today/continuous-production-profiling-and-diagnostics/
 
 ## demo.py
 
